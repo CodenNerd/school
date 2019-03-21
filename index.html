@@ -1,62 +1,115 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>School</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
     <style>
-        *{
-            box-sizing: border-box;
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0px;
+        padding: 0px;
+        font-family: Calibri;
+        background-color: white;
+      }
+      .nav {
+        width: 100%;
+        min-height: 50px;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 5px 2%;
+        box-shadow: 1px 1px 1px 1px grey;
+        display: none;
+        z-index: +5;
+      }
+      .login {
+        background-color: cadetblue;
+        padding: 5px 2%;
+        color: white;
+        float: right;
+        border: 1px solid cadetblue;
+        border-radius: 3px;
+        margin: 5px 2%;
+      }
+      .school-name {
+        color: rgb(105, 17, 1);
+        font-weight: bold;
+        font-size: 25px;
+      }
+      @media screen and (max-height: 658px) {
+        .nav {
+          display: block;
         }
-        body{
-            margin: 0px; 
-            padding: 0px;
-            font-family: Calibri; 
-            background-color: white;
-        }
-        .nav{
-            width: 100%;
-            min-height: 50px;
-            background-color: white;
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding: 5px 2%;
-            box-shadow: 1px 1px 1px 1px grey;
-            display: none;
-            z-index: +5;
-        }
-        .login{
-            background-color: cadetblue;
-            padding: 5px 2%;
-            color: white;
-            float: right;
-            border: 1px solid cadetblue;
-            border-radius: 3px;
-            margin: 5px 2%;
-            
-        }
-        .school-name{
-            color: rgb(105, 17, 1);
-            font-weight: bold;
-            font-size: 25px;
-        }
-        @media screen and (min-height:200px){
-            .nav{
-                display: block;
-            }
-        }
+      }
+      .hero {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        color: white;
+        background-color: darkslategrey;
+        min-height: 800px;
+      }
+      .hero h2 {
+        font-weight: lighter;
+        font-size: 60px;
+        
+      }
+      .hero h2 .hero-sch-name{
+          display: inline-block;
+          transform: scale(2,2) translateX(40px);
+          text-shadow: 1px 1px 1px rgb(20, 53, 53);
 
+      }
+      .hero-text{
+          padding-top: 150px;
+          padding-left: 50px;
+      }
+      .little-screen{
+          width: 30%;
+          height: 500px;
+          background-color: rgb(47, 83, 83);
+          float: right;
+          margin: 100px 15% auto 5%;
+          box-shadow: 1px 1px 10px black;
+      }
+      .circles{
+          display:inline-block;
+          
+          border-radius: 50%;
+          background-color: white;
+      }
+      .c1{
+        width: 25px;
+          height: 25px;
+      }
+      .c2{
+          width: 40px;
+          height: 40px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="nav">
-        <span class="school-name"> Clicka Academy </span>
-        <button class="login">login</button>
+      <span class="school-name"> Clicka Academy </span>
+      <button class="login">login</button>
     </div>
-    
-</body>
+    <section class="hero">
+       <div class="little-screen"></div>
+       <div class="hero-text">
+            <span class="circles c1"></span>
+            <span class="circles c2"></span>
+        <h2><span class="hero-sch-name">CLICKA </span> <br><b>Intensive Academy</b></h2>
+        <b><i>...Excellence Always</i></b>
+        <b></b>
+      </div>
+     <br><br><br><br>
+    </section>
+  </body>
 </html>
