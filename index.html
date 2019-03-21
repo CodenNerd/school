@@ -73,7 +73,7 @@
       }
       .little-screen{
           width: 30%;
-          height: 500px;
+          min-height: 500px;
           background-color: rgb(47, 83, 83);
           float: right;
           margin: 100px 15% auto 5%;
@@ -81,7 +81,6 @@
       }
       .circles{
           display:inline-block;
-          
           border-radius: 50%;
           background-color: white;
       }
@@ -109,6 +108,13 @@
               transform: translateY(-50px);
           }
       }
+      .ls-img{
+        width: 100px;
+        float: right;
+        margin-top: 450px;
+        margin-right: 50px;
+        margin-left: -100px;
+      }
     </style>
   </head>
   <body>
@@ -116,16 +122,18 @@
       <span class="school-name"> Clicka Academy </span>
       <button class="login">login</button>
     </div>
-    <section class="hero">
+    <section class="hero">    <img class="ls-img" src="images/hero-2.png" alt="reading boy">
+
        <div class="little-screen"></div>
        <div class="hero-text">
             <span class="circles c1"></span>
             <span class="circles c2"></span>
         <h2><span class="hero-sch-name">CLICKA </span> <br><b>Intensive Academy</b></h2>
         <b><i>...Excellence Always</i></b>
-        <b></b>
+        <b></b>       
+
       </div>
-    
+
     </section>
     <section class="hero"></section>
 
