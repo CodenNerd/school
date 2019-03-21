@@ -28,6 +28,8 @@
         box-shadow: 1px 1px 1px 1px grey;
         display: none;
         z-index: +5;
+        animation: slide-out 0.5s ease-in forwards;
+        
       }
       .login {
         background-color: cadetblue;
@@ -43,10 +45,8 @@
         font-weight: bold;
         font-size: 25px;
       }
-      @media screen and (max-height: 658px) {
-        .nav {
-          display: block;
-        }
+      @media only screen and (min-height: 658px) {
+        
       }
       .hero {
         width: 100%;
@@ -93,6 +93,22 @@
           width: 40px;
           height: 40px;
       }
+      @keyframes slide-out{
+          from{
+              transform: translateY(-50px);
+          }
+          to{
+              transform: translateY(0px);
+          }
+      }
+      @keyframes slide-in{
+          from{
+              transform: translateY(0px);
+          }
+          to{
+              transform: translateY(-50px);
+          }
+      }
     </style>
   </head>
   <body>
@@ -109,7 +125,25 @@
         <b><i>...Excellence Always</i></b>
         <b></b>
       </div>
-     <br><br><br><br>
+    
     </section>
+    <section class="hero"></section>
+
+    <script>
+        window.onscroll = ()=>{
+            scrollFunction();
+        }
+        const scrollFunction = () =>{
+            const nav = document.getElementsByClassName('nav')[0];
+            if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+               
+               nav.style.display = "block";
+               nav.style.animation = "slide-out 0.5s ease-in forwards";
+            }
+            else{
+                nav.style.animation = "slide-in 0.5s ease-in forwards";
+            }
+        }
+    </script>
   </body>
 </html>
