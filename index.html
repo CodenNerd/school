@@ -41,9 +41,10 @@
         margin: 5px 2%;
       }
       .school-name {
-        color: rgb(105, 17, 1);
+        color: white;
         font-weight: bold;
         font-size: 25px;
+        text-shadow: 1px 1px 1px black;
       }
       @media only screen and (min-height: 658px) {
         
@@ -55,7 +56,9 @@
         color: white;
         background-color: darkslategrey;
         min-height: 800px;
+        margin-bottom: -20px;
       }
+      
       .hero h2 {
         font-weight: lighter;
         font-size: 60px;
@@ -115,12 +118,18 @@
         margin-right: 50px;
         margin-left: -100px;
       }
+      
+        ul.cat-li li{
+
+        list-style-type: square;
+
+        }
     </style>
   </head>
   <body>
     <div class="nav">
       <span class="school-name"> Clicka Academy </span>
-      <button class="login">login</button>
+      <a href="login.html"><button class="login">login</button></a>
     </div>
     <section class="hero">    <img class="ls-img" src="images/hero-2.png" alt="reading boy">
 
@@ -129,13 +138,17 @@
             <span class="circles c1"></span>
             <span class="circles c2"></span>
         <h2><span class="hero-sch-name">CLICKA </span> <br><b>Intensive Academy</b></h2>
-        <b><i>...Excellence Always</i></b>
-        <b></b>       
-
+        <b><i>&nbsp; Excellence Always</i></b>
+        <b>
+           <ul class="cat-li">
+            <li>Creche</li>
+            <li>Primary</li>
+            <li>Secondary </li>
+            </ul>
+           </b>       
       </div>
-
     </section>
-    <section class="hero"></section>
+    
 
     <script>
         window.onscroll = ()=>{
