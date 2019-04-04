@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Student Dashboard</title>
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+      body{
+        margin: 0px;
+      }
+      .circles {
+        display: inline-block;
+        border-radius: 50%;
+        background-color: white;
+      }
+      .c1 {
+        width: 25px;
+        height: 25px;
+      }
+      .c2 {
+        width: 40px;
+        height: 40px;
+      }
+      .sch-name {
+        margin-top: 0px;
+        color: white;
+        display: inline-block;
+        font-size: 50px;
+        font-weight: bolder;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .logo {
+        display: inline-block;
+        transform: scale(0.4, 0.4);
+        margin: 0px;
+        position: absolute;
+        top: -20px;
+      }
+      .thin-dash-nav {
+        border-bottom: 1px solid grey;
+        padding: 0px;
+        height: 40px;
+        position: fixed;
+        width: 100%;
+        background: linear-gradient(#003333, rgb(48, 83, 83))
+      }
+    </style>
+  </head>
+  <body>
+    <div class="thin-dash-nav">
+       <span class="logo">
+        <span class="circles c1"></span>
+        <span class="circles c2"></span>
+        <h2 class="sch-name">CIA</h2>
+      </span>
+    </div>
+ 
+    <section>
+      <div class="sidebar">
+        <li>
+            <ul><a href=""></a></ul>
+            <ul><a href=""></a></ul>
+            <ul><a href=""></a></ul>
+            <ul><a href=""></a></ul>
+            <ul><a href=""></a></ul>
+          </li>
+      </div>
+      <div class="d-content"></div>
+    </section>
+  </body>
+</html>
