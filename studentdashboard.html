@@ -4,13 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
     <title>Student Dashboard</title>
     <style>
-      *{
+      * {
         box-sizing: border-box;
       }
-      body{
+      body {
         margin: 0px;
+        font-family: Calibri;
       }
       .circles {
         display: inline-block;
@@ -40,6 +47,7 @@
         margin: 0px;
         position: absolute;
         top: -20px;
+        left: -35px;
       }
       .thin-dash-nav {
         border-bottom: 1px solid grey;
@@ -47,30 +55,109 @@
         height: 40px;
         position: fixed;
         width: 100%;
-        background: linear-gradient(#003333, rgb(48, 83, 83))
+       /* background: linear-gradient(#003333, rgb(48, 83, 83)); */
+        background: #003333;
       }
+      .fa-lg {
+        font-size: 20px;
+        color: slategray;
+        flex: 1;
+      }
+      .sidebar {
+        top: 40px;
+        display: inline-block;
+        padding: 0px;
+        height: 800px;
+        background: #003333;
+        position: fixed;
+        transition: 1s;
+      }
+      .sidebar > ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+      }
+      .sidebar > ul li {
+        margin: 0px;
+        padding: 0px;
+        background: #003333;
+        border-bottom: 1px solid black;
+        text-align: justify;
+      }
+      .sidebar>ul li>a{
+        display: inline-block;
+        padding: 25px;
+        text-decoration: none;
+        display: flex;
+        transition: 1s;
+      }
+      .sidebar-icon-titles{
+        color: slategray;
+        font-weight: bolder;
+        display: inline-block;
+        text-align: left;
+        min-width: 100px;
+        flex: 1;
+        display: none;
+      }
+      .sidebar>ul li>a:hover{
+        background: #001b1b;
+      }
+      .sidebar>ul li:hover .sidebar-icon-titles{
+        display: inline-block;
+        position: absolute;
+        left: 75px;
+        background: #001b1b;
+        min-width: 150px;
+        padding: 23px 25px;
+        margin-top: -25px;
+        z-index: -1;
+        animation: slide-in 0.5s ease-out forwards;        
+      }
+
+      @keyframes slide-in{
+        from{
+          transform: translateX(-150px)
+        }
+        to{
+          transform: translateX(0px)
+        }
+      }
+     
     </style>
   </head>
   <body>
     <div class="thin-dash-nav">
-       <span class="logo">
+      <span class="logo">
         <span class="circles c1"></span>
         <span class="circles c2"></span>
         <h2 class="sch-name">CIA</h2>
       </span>
     </div>
- 
+    <br /><br />
     <section>
       <div class="sidebar">
-        <li>
-            <ul><a href=""></a></ul>
-            <ul><a href=""></a></ul>
-            <ul><a href=""></a></ul>
-            <ul><a href=""></a></ul>
-            <ul><a href=""></a></ul>
+        <ul>
+          <li>
+            <a href=""><i class="fas fa-user-graduate fa-lg"></i><span class="sidebar-icon-titles">Student Profile</span></a>
           </li>
+          <li>
+            <a href=""><i class="fas fa-file-alt fa-lg"></i><span class="sidebar-icon-titles">Results</span></a>
+          </li>
+          <li>
+            <a href=""><i class="fas fa-user-friends fa-lg"></i><span class="sidebar-icon-titles">Parents</span></a>
+          </li>
+          <li>
+            <a href=""><i class="fas fa-money-check-alt fa-lg"></i><span class="sidebar-icon-titles">Payments</span></a>
+          </li>
+          <li>
+            <a href=""><i class="fas fa-envelope fa-lg"></i><span class="sidebar-icon-titles">Mail</span></a>
+          </li>
+        </ul>
       </div>
-      <div class="d-content"></div>
+      <div class="d-content">
+          <i class="fas fa-user fa-lg"></i>
+      </div>
     </section>
   </body>
 </html>
