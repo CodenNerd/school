@@ -123,7 +123,58 @@
           transform: translateX(0px)
         }
       }
-     
+     section.major-section{
+       display: flex;
+     }
+     .d-content{
+      padding-left: 100px;
+       background: lightgray;
+      /* width: 100%; */
+       height: 1800px;
+       display: flex;
+     }
+     .very-big-icon{
+       font-size: 200px;
+       color: grey;
+     }
+     .icon-div{
+       padding: 50px;
+       width: 400px;
+       flex: 1;
+     }
+     .avatar-button{
+       margin: 30px 0px;
+       color: white;
+       background-color:rgb(14, 85, 218);
+       border: 0px solid cornflowerblue;
+       width: 180px;
+       height: 30px;
+       border-radius: 6px; 
+     }
+     .info-div{
+       flex: 6;
+       height: 800px;
+     }
+     .info-card{
+       background-color:lightgrey;
+       display: inline-block;
+       padding: 20px 40px;
+       min-width: 400px;
+       margin: 10px;
+       margin-top: 50px;
+       color: dimgrey;
+       box-shadow: 1px 1px 5px black;
+     }
+     .info-card>h2{
+
+     }
+     .info-card>div>h4{
+       display: inline-block;
+       margin: 5px;
+     }
+     .info-card>div>span{
+
+     }
     </style>
   </head>
   <body>
@@ -135,7 +186,7 @@
       </span>
     </div>
     <br /><br />
-    <section>
+    <section class="major-section">
       <div class="sidebar">
         <ul>
           <li>
@@ -156,7 +207,45 @@
         </ul>
       </div>
       <div class="d-content">
-          <i class="fas fa-user fa-lg"></i>
+          <div class="icon-div">
+            <i class="fas fa-user very-big-icon"></i>
+          <br>
+          <button class="avatar-button"> Change Avatar </button>
+          </div>
+          <div class="info-div">
+            <div class="info-card">
+              <h2>Personal Information</h2>
+              <hr>
+              <div><h4>Name: </h4><span>Atanda AbdulAzeez</span></div>
+              <div><h4>Age: </h4><span>23 years</span></div>
+              <div><h4>Current Class: </h4><span>SSS10</span></div>
+            </div>
+
+            <div class="info-card">
+              <h2>Personal Information</h2>
+              <hr>
+              <div><h4>Name: </h4><span>Atanda AbdulAzeez</span></div>
+              <div><h4>Age: </h4><span>23 years</span></div>
+              <div><h4>Current Class: </h4><span>SSS10</span></div>
+            </div>
+
+            <div class="info-card">
+              <h2>Personal Information</h2>
+              <hr>
+              <div><h4>Name: </h4><span>Atanda AbdulAzeez</span></div>
+              <div><h4>Age: </h4><span>23 years</span></div>
+              <div><h4>Current Class: </h4><span>SSS10</span></div>
+            </div>
+            
+            <div class="info-card">
+              <h2>Personal Information</h2>
+              <hr>
+              <div><h4>Name: </h4><span>Atanda AbdulAzeez</span></div>
+              <div><h4>Age: </h4><span>23 years</span></div>
+              <div><h4>Current Class: </h4><span>SSS10</span></div>
+            </div>
+
+          </div>
       </div>
     </section>
   </body>
